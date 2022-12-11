@@ -339,28 +339,17 @@ const Index = () => {
     let totalAllowance = await service_inquiry_allowance(tokenInfo.token0Address)
     console.log("totalAllowance",totalAllowance.toLocaleString())
 
-    // if (totalAllowance == 0) {
-    // let bigNumberAmountIn = BigNumber.from(amountIn.toString())
-    // let bigNumberBalance = balance
     if (bigNumberAmountIn.gt(totalAllowance)) {
       alert("Cannot trade - Please approve first")
-      // await service_request_allowance(tokenInfo.token0Address)
-      await service_request_allowance(tokenInfo.token0Address,amountIn)
+      await service_request_allowance(tokenInfo.token0Address)
       updateStatus("")
       return
     }
 
-
-
-
     let inputCoin0 = tokenInfo.coin0Info
-
-
     let balance = inputCoin0.balance
 
-
     {
-
       let bigNumberBalance = balance
 
       if (bigNumberAmountIn.gt(bigNumberBalance)){
