@@ -354,6 +354,7 @@ const Index = () => {
 
       if (bigNumberAmountIn.gt(bigNumberBalance)){
         alert("Insufficient balance")
+        updateStatus("")
         return
       }
     }
