@@ -2,8 +2,8 @@
 
 ## What is this?
 - starter template for uniswap DEFI API 
-- consume API for find rate 
-- consume API for find swap token
+- use API to find rate 
+- use API to swap token
 
 
 ## How to use?
